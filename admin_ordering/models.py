@@ -14,6 +14,11 @@ class OrderableModel(models.Model):
         abstract = True
         ordering = ["ordering"]
 
+    def __lt__(self, other):
+        return (
+            self.ordering < other.ordering if isinstance(other, type(self)) else False
+        )
+
     def save(self, *args, **kwargs):
         if not self.ordering:
             max = self.__class__._default_manager.aggregate(m=Max("ordering"))["m"]
@@ -21,11 +26,6 @@ class OrderableModel(models.Model):
         super().save(*args, **kwargs)
 
     save.alters_data = True
-
-    def __lt__(self, other):
-        return (
-            self.ordering < other.ordering if isinstance(other, type(self)) else False
-        )
 
     @classmethod
     def check(cls, **kwargs):
