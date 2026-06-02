@@ -43,10 +43,10 @@ optional-dependencies.tests = [
 urls.Homepage = "https://github.com/matthiask/django-admin-ordering/"
 
 [tool.hatch]
+version.path = "admin_ordering/__init__.py"
 build.include = [
   "admin_ordering/",
 ]
-version.path = "admin_ordering/__init__.py"
 
 [tool.ruff]
 target-version = "py310"
