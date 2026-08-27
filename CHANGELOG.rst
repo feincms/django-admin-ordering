@@ -6,6 +6,9 @@ Change log
 Next version
 ~~~~~~~~~~~~
 
+0.21 (2026-08-27)
+~~~~~~~~~~~~~~~~~
+
 - Future-proofed the library a bit by emitting JSON blobs instead of multiple
   script tags when using more than one orderable on one admin page. The reason
   for this is that Django's object-based script tag support only looks at paths
