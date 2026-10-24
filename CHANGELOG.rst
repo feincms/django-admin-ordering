@@ -6,6 +6,9 @@ Change log
 Next version
 ~~~~~~~~~~~~
 
+0.22 (2026-10-24)
+~~~~~~~~~~~~~~~~~
+
 - Added Python 3.15.
 - Fixed ``OrderableModel`` comparisons with unrelated objects: ``obj > 5``
   and similar comparisons returned ``True`` instead of raising a
