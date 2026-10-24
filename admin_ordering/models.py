@@ -15,9 +15,9 @@ class OrderableModel(models.Model):
         ordering = ["ordering"]
 
     def __lt__(self, other):
-        return (
-            self.ordering < other.ordering if isinstance(other, type(self)) else False
-        )
+        if not isinstance(other, type(self)):
+            return NotImplemented
+        return self.ordering < other.ordering
 
     def save(self, *args, **kwargs):
         if not self.ordering:

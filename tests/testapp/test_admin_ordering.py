@@ -68,3 +68,15 @@ class OrderableAdminTest(TestCase):
         Orderable.objects.create(ordering=42)
         obj = Orderable.objects.create()
         self.assertEqual(obj.ordering, 52)
+
+    def test_orderable_model_comparison(self):
+        a = Orderable(ordering=10)
+        b = Orderable(ordering=20)
+        self.assertTrue(a < b)
+        self.assertTrue(b > a)
+        self.assertEqual(sorted([b, a]), [a, b])
+
+        with self.assertRaises(TypeError):
+            a > 5  # noqa: B015
+        with self.assertRaises(TypeError):
+            a >= None  # noqa: B015

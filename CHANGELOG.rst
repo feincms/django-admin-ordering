@@ -6,6 +6,10 @@ Change log
 Next version
 ~~~~~~~~~~~~
 
+- Fixed ``OrderableModel`` comparisons with unrelated objects: ``obj > 5``
+  and similar comparisons returned ``True`` instead of raising a
+  ``TypeError``.
+
 0.21 (2026-08-27)
 ~~~~~~~~~~~~~~~~~
 
