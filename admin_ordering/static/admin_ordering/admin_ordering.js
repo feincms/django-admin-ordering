@@ -20,7 +20,7 @@ django.jQuery(($) => {
   }
 
   function setupSortableHandle($sortable, inputFieldSelector, rowsSelector, data, updateOrdering) {
-    $sortableHandle = $sortable.find(`.field-${data.field}`)
+    const $sortableHandle = $sortable.find(`.field-${data.field}`)
     if (!$sortableHandle.find("input").length) {
       return $sortableHandle
     }
