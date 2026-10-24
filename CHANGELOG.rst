@@ -6,6 +6,7 @@ Change log
 Next version
 ~~~~~~~~~~~~
 
+- Added Python 3.15.
 - Fixed ``OrderableModel`` comparisons with unrelated objects: ``obj > 5``
   and similar comparisons returned ``True`` instead of raising a
   ``TypeError``.
