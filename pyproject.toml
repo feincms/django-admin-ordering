@@ -94,6 +94,8 @@ lint.extend-ignore = [
   "B905",
   # No line length errors
   "E501",
+  # pylint refactoring suggestions
+  "PLR",
   "RUF012",
 ]
 lint.per-file-ignores."*/migrat*/*" = [
