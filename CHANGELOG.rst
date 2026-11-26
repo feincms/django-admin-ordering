@@ -6,6 +6,12 @@ Change log
 Next version
 ~~~~~~~~~~~~
 
+- Changed the admin CSS to use Django's admin CSS variables (with the
+  previous colors as fallbacks) so that the drag handle and the up/down
+  buttons follow dark mode and admin themes. The drag icon is now drawn
+  through a CSS mask. The hover color of the up/down buttons can be
+  customized with ``--admin-ordering-hover-color``.
+
 0.22 (2026-10-24)
 ~~~~~~~~~~~~~~~~~
 

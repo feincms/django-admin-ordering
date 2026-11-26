@@ -4,8 +4,8 @@
 
 .ui-sortable-helper {
   opacity: 0.8;
-  border-top: 1px dashed var(--border-color);
-  border-bottom: 1px dashed var(--border-color);
+  border-top: 1px dashed var(--border-color, #ccc);
+  border-bottom: 1px dashed var(--border-color, #ccc);
 }
 
 .ui-sortable-helper > td,
@@ -39,10 +39,8 @@
   display: inline-block;
   width: 14px;
   height: 14px;
-  background-size: 14px 14px;
-  background-image: url("admin_ordering-icon.svg");
-  background-repeat: no-repeat;
-  background-position: center center;
+  background-color: var(--border-color, #ccc);
+  mask: url("admin_ordering-icon.svg") center / 14px 14px no-repeat;
 }
 
 .admin-ordering-field .admin-ordering-field-input-wrapper input {
@@ -99,18 +97,18 @@
 .admin-ordering-field-up-button {
   /* CSS triangle */
   border-right : 7px solid transparent;
-  border-bottom : 7px solid #CCCCCC;
+  border-bottom : 7px solid var(--border-color, #ccc);
   border-left : 7px solid transparent;
 }
 
 .admin-ordering-field-down-button {
   /* CSS triangle */
   border-right : 7px solid transparent;
-  border-top : 7px solid #CCCCCC;
+  border-top : 7px solid var(--border-color, #ccc);
   border-left : 7px solid transparent;
 }
 
 .admin-ordering-field-up-button:hover, .admin-ordering-field-down-button:hover {
-  border-top-color: #999;
-  border-bottom-color: #999;
+  border-top-color: var(--admin-ordering-hover-color, #999);
+  border-bottom-color: var(--admin-ordering-hover-color, #999);
 }
